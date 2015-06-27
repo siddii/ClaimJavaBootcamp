@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Java Bootcamp - Week 1!</title>
+
+		<meta name="description" content="Java Bootcamp - Week 1!">
+		<meta name="author" content="Siddique Hameed">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+        <style type="text/css">
+            .reveal h6 {
+                text-transform: none;
+            }
+            .reveal .intro a:not(.image) {
+                color: #eee8d5;
+            }
+        </style>
+    </head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section class="intro" data-transition="zoom">
+                    <h2>Java Bootcamp!</h2>
+					<img src="images/bg.png"/>
+						<h5>By</h5>
+						<h5>Siddique Hameed</h5>
+						<h6>Week 1 - June 13, 2015</h6>
+                        <small><i><a target="_new" href="http://twitter.com/siddii">@siddii</a></i>   |  <i><a target="_new" href="http://github.com/siddii">http://github.com/siddii</a></i> | <i><a target="_new" href="https://www.linkedin.com/in/siddiquehameed">https://www.linkedin.com/in/siddiquehameed</a></i></small>
+				</section>
+
+                <section data-transition="slide" data-background="#4d7e65" data-background-transition="slide">
+                    <h2>Introductions...</h2>
+                </section>
+
+				<section data-transition="fade">
+					<h3>Programmer!</h3>
+                    <img class="fragment" src="images/computer-programmer.jpg"/>
+				</section>
+
+				<section>
+					<h3>How to think like a programmer?</h3>
+                    <img class="fragment" src="images/einstein-quote-2.jpg"/>
+				</section>
+
+				<section data-transition="fade">
+					<h3>Problem Solving...</h3>
+                    <img class="fragment" width="50%" height="50%" src="images/maze-multiple-solution.png"/>
+				</section>
+
+				<section>
+					<h3>Thinking!</h3>
+                    <img class="fragment" src="images/thinking.jpg"/>
+				</section>
+
+				<section data-transition="fade">
+					<h3>Reinventing Wheels?</h3>
+                    <img class="fragment" src="images/reinvent-wheel.png"/>
+				</section>
+
+				<section>
+					<h3>Problem Solved?</h3>
+                    <img class="fragment" width="50%" height="50%" src="images/problem-solved.jpeg"/>
+				</section>
+
+				<section data-transition="fade">
+					<h3>Along the way, this happens...</h3>
+                    <img class="fragment" src="images/pointers.png"/>
+				</section>
+
+				<section>
+					<h3>Code Editors</h3>
+                    <ul>
+                        <li class="fragment">vi/vim</li>
+                        <li class="fragment">Emacs</li>
+                        <li class="fragment">Sublime</li>
+                        <li class="fragment">Atom by Github</li>
+                        <li class="fragment">etc.</li>
+                    </ul>
+				</section>
+
+				<section>
+					<h3>Integrated Development Environment (IDE)s</h3>
+                    <ul>
+                        <li class="fragment">IntelliJ</li>
+                        <li class="fragment">Eclipse</li>
+                        <li class="fragment">Rational Application Developer</li>
+                        <li class="fragment">XCode</li>
+                        <li class="fragment">Visual Studio</li>
+                        <li class="fragment">etc.</li>
+                    </ul>
+				</section>
+
+                <section>
+                    <h3>Week 1 Topics</h3>
+                    <ul>
+                        <li class="fragment">Setup IntelliJ/Eclipse/IDE/Code Editors</li>
+                        <li class="fragment">Version control with git and GitHub</li>
+                        <li class="fragment">Variables, primitives & objects</li>
+                        <li class="fragment">Methods</li>
+                        <li class="fragment">Control statements</li>
+                        <li class="fragment">Arrays</li>
+                        <li class="fragment">Basic Input & Output (I/O) operations</li>
+                        <li class="fragment">Introduction to Object-Oriented Programming principles</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Are you this guy?</h2>
+                    <img class="fragment" width="50%" height="50%" src="images/leaves-company.jpeg"/>
+                </section>
+
+                <section>
+                    <h3>Bug?</h3>
+                    <img class="fragment" src="images/feature-not-a-bug.jpg"/>
+                </section>
+
+
+                <section>
+                    <img class="fragment" src="images/keep-calm-and-start-coding-34.png"/>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+
+				theme: 'blood', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
