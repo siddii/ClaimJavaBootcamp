@@ -1,8 +1,5 @@
 package com.workforce.hr.domains;
 
-import com.sun.tools.javac.jvm.Gen;
-
-import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -19,9 +16,10 @@ public class Employee {
     private Date dateOfBirth;
     private Date hireDate;
 
-
     private String title;
-    private double salary;
+
+    //making this protected so instance of Manager can access to calculate bonus
+    protected double salary;
 
     public Employee(String firstName, String lastName) {
         this.firstName = firstName;
@@ -60,7 +58,7 @@ public class Employee {
     }
 
     public double calculateBonus() {
-        return ((salary * yearsOfExperience())/ 100) / 10;
+        return ((salary * yearsOfExperience()) / 100) / 10;
     }
 
     public int age() {

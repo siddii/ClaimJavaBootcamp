@@ -36,20 +36,20 @@ public class PayrollProcessor {
         employee3.setHireDate(dateFormat.parse("10/12/2012"));
 
 
-        Manager marketingManager = new Manager(100, "Cyndy", "Manager");
-        marketingManager.setGender(Gender.FEMALE);
-        marketingManager.setSalary(75000);
-        marketingManager.setHireDate(dateFormat.parse("10/01/2014"));
+        Manager manager = new Manager(100, "Cyndy", "Manager");
+        manager.setGender(Gender.FEMALE);
+        manager.setSalary(75000);
+        manager.setHireDate(dateFormat.parse("10/01/2004"));
 
-        marketingManager.addEmployee(1);
-        marketingManager.addEmployee(2);
-        marketingManager.addEmployee(3);
+        manager.addEmployee(1);
+        manager.addEmployee(2);
+        manager.addEmployee(3);
 
-
-        Employee[] employees = {employee1, employee2, employee3};
-
-        department.setEmployees(employees);
-        department.setManager(marketingManager);
+        //Adding manager first
+        department.addEmployee(manager);
+        department.addEmployee(employee1);
+        department.addEmployee(employee2);
+        department.addEmployee(employee3);
         return department;
     }
 

@@ -25,4 +25,10 @@ public class Manager extends Employee {
     public void removeEmployee(int employeeId) {
         //remove his report
     }
+
+
+    public double calculateBonus() {
+        //twice the bonus value of his/her employees
+        return super.calculateBonus() * 2;
+    }
 }
