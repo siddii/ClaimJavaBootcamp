@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 
 /**
  * Created by siddique on 7/20/15.
@@ -20,13 +21,13 @@ public class EmployeeServlet extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String ssn = request.getParameter("ssn");
 
-        Employee employee = new Employee(firstName, lastName, ssn);
+        System.out.println("EmployeeMap.employeeMap BEFORE = " + EmployeeMap.employeeMap);
 
-        EmployeeMap.addEmployee(employee);
+        int id = EmployeeMap.addEmployee(new Employee(firstName, lastName, ssn));
 
-        System.out.println("com.workforce.hr.system.EmployeeServlet.doPost");
+        System.out.println("EmployeeMap.employeeMap AFTER = " + EmployeeMap.employeeMap);
 
-        response.getWriter().println("<h1>Employee has been successfully added!</h1>");
+        response.getWriter().println(id);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

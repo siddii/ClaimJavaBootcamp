@@ -19,8 +19,13 @@ public class EmployeeMap {
         employeeMap.put(++id, new Employee("Bobby", "Doe", "555-55-5558"));
     }
 
-    public static void addEmployee(Employee employee) {
+    public static int addEmployee(Employee employee) {
         int id = employeeMap.size();
         employeeMap.put(++id, employee);
+        return id;
+    }
+
+    public static HashMap<Integer, Employee> getEmployeeMap() {
+        return employeeMap;
     }
 }
