@@ -1,5 +1,7 @@
 <%@ page import="com.workforce.hr.system.EmployeeMap" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="java.util.Iterator" %>
+<%@ page import="com.workforce.hr.system.Employee" %>
 <%--
   Created by IntelliJ IDEA.
   User: siddique
@@ -15,6 +17,12 @@
         body {
             background: #abcdef;
         }
+        table {
+            width: 100%;
+            border: 1px solid yellow;
+        }
+
+
     </style>
 </head>
 <body>
@@ -27,5 +35,27 @@
     int employeeCount = EmployeeMap.employeeMap.size();
 %>
 <h3>Total number of employees : <%= employeeCount%></h3>
+
+
+<table>
+<tr>
+    <th>Employee Id</th>
+</tr>
+<%
+    for (Iterator<Integer> iterator = EmployeeMap.employeeMap.keySet().iterator(); iterator.hasNext(); ) {
+        Integer id = iterator.next();
+        System.out.println("id = " + id);
+        Employee employee = EmployeeMap.employeeMap.get(id);
+        System.out.println("employee = " + employee);
+        out.println("<tr><td>Employee Id: " + id +"</td></tr>");
+%>
+<%
+    }
+%>
+
+</table>
+
+
+
 </body>
 </html>
