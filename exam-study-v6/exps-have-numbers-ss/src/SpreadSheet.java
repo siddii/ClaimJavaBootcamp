@@ -148,8 +148,8 @@ public class SpreadSheet extends JFrame {
                 if (tok2 == null) return null;
                 if (!tokens.hasMoreTokens()) return null;
                 String tok3 = tokens.nextToken();
-                tok3 = evaluateToken(tok3, depth);
-                if (tok3 == null) return null;
+//                tok3 = evaluateToken(tok3, depth);
+//                if (tok3 == null) return null;
                 if (tok2.equals("+")) {
                     tok = add(tok, tok3);
                 } else if (tok2.equals("*")) {
